@@ -6,14 +6,17 @@
 
 body {
     overflow-x: hidden;
+    background-color: #{{ site.color.secondary }};
 }
 
 p {
     font-size: 20px;
+    color: #{{ site.color.text }};
 }
 
 p.small {
     font-size: 16px;
+    font-family: Verdana, serif;
 }
 
 a,
@@ -32,8 +35,8 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+    font-family: Verdana, serif;
 }
 
 hr.star-light,
@@ -45,25 +48,25 @@ hr.star-primary {
     border-top: solid 5px;
     text-align: center;
     overflow: visible;
+    font-family: Verdana, serif;
 }
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
+    content: "";
     display: inline-block;
     position: relative;
     top: -.8em;
     padding: 0 .25em;
-    font-family: FontAwesome;
     font-size: 2em;
 }
 
 hr.star-light {
-    border-color: #fff;
+    border-color: #{{ site.color.text }};
 }
 
 hr.star-light:after {
-    color: #fff;
+    color: #{{ site.color.text }};
     background-color: #{{ site.color.primary }};
 }
 
@@ -73,7 +76,7 @@ hr.star-primary {
 
 hr.star-primary:after {
     color: #{{ site.color.secondary }};
-    background-color: #fff;
+    background-color: #{{ site.color.text }};
 }
 
 .img-centered {
@@ -82,8 +85,9 @@ hr.star-primary:after {
 
 header {
     text-align: center;
-    color: #fff;
+    color: #{{ site.color.text }};
     background: #{{ site.color.primary }};
+    font-family: Verdana, serif;
 }
 
 header .container {
@@ -99,7 +103,6 @@ header img {
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
@@ -150,8 +153,10 @@ header .intro-text .skills {
 
 .navbar {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-weight: 500;
+    letter-spacing: 4px;
+    font-family: Consolas, serif;
+    color: #{{ site.color.text }};
 }
 
 .navbar a:focus {
@@ -181,7 +186,7 @@ section h2 {
 }
 
 section.success {
-    color: #fff;
+    color: #{{ site.color.text }};
     background: #{{ site.color.primary }};
 }
 
@@ -193,6 +198,14 @@ section.success {
     section.first {
         padding-top: 75px;
     }
+}
+
+#portfolio {
+    font-family: Verdana, serif;
+    background-image: url("../../img/bg1.svg");
+    background-size: cover;
+    background-position: right top;
+    color: #{{ site.color.text }};
 }
 
 #portfolio .portfolio-item {
@@ -230,7 +243,6 @@ section.success {
     margin-top: -12px;
     text-align: center;
     font-size: 20px;
-    color: #fff;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
@@ -283,7 +295,7 @@ section.success {
     margin-top: 15px;
     border: solid 2px #fff;
     font-size: 20px;
-    color: #fff;
+    color: #{{ site.color.text }};
     background: 0 0;
     transition: all .3s ease-in-out;
 }
@@ -354,7 +366,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 footer {
-    color: #fff;
+    color: #{{ site.color.text }};
 }
 
 footer h3 {
@@ -481,4 +493,8 @@ footer .footer-below {
 .modal.fade.in {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+}
+
+#contact * {
+    color: #{{ site.color.text }};
 }
